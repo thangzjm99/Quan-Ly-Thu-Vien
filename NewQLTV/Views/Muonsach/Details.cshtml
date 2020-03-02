@@ -1,0 +1,50 @@
+﻿@model NewQLTV.Models.MUONSACK
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MUONSACK</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MAMUONTRA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAMUONTRA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MASINHVIEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MASINHVIEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MASACH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MASACH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAYMUON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYMUON)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MATHETV }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

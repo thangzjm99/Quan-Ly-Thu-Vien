@@ -1,0 +1,63 @@
+﻿@model IEnumerable<NewQLTV.Models.DOCGIA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TENDOCGIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIOITINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYSINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIACHI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MATHETV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TENDOCGIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIOITINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYSINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIACHI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MATHETV)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MASINHVIEN }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MASINHVIEN }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MASINHVIEN })
+        </td>
+    </tr>
+}
+
+</table>
