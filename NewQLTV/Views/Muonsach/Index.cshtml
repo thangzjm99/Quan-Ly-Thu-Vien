@@ -9,43 +9,48 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.MAMUONTRA)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MASINHVIEN)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MASACH)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NGAYMUON)
-        </th>
-        <th></th>
-    </tr>
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MAMUONTRA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MASINHVIEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MASACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYMUON)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.MAMUONTRA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MASINHVIEN)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MASACH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NGAYMUON)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MATHETV }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MATHETV }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MATHETV })
-        </td>
-    </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MAMUONTRA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MASINHVIEN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MASACH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NGAYMUON)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MATHETV }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MATHETV }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MATHETV })
+                </td>
+            </tr>
+        }
+    </tbody>
 
 </table>
