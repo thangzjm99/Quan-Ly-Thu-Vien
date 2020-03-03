@@ -11,6 +11,10 @@
 </p>
 <table class="table">
     <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model. MASINHVIEN)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.TENDOCGIA)
         </th>
@@ -33,31 +37,34 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TENDOCGIA)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GIOITINH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NGAYSINH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LOP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DIACHI)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MATHETV)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MASINHVIEN }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MASINHVIEN }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MASINHVIEN })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MASINHVIEN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TENDOCGIA)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.GIOITINH)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NGAYSINH)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LOP)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DIACHI)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MATHETV)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MASINHVIEN }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MASINHVIEN }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MASINHVIEN })
+    </td>
+</tr>
 }
 
 </table>
