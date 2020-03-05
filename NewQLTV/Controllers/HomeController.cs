@@ -26,5 +26,10 @@ namespace NewQLTV.Controllers
 
             return View();
         }
+
+        public ActionResult Guide()
+        {
+            return View();
+        }
     }
 }
