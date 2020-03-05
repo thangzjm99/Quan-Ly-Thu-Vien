@@ -17,8 +17,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                   
-                   
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+
+
                 </button>
                 @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
@@ -26,9 +31,14 @@
                 <ul class="nav navbar-nav">
 
                     <li>@Html.ActionLink("Hướng dẫn", "Index", "Home")</li>
-                    <li>@Html.ActionLink("...", "User", "Home")</li>
+                    <li>@Html.ActionLink("Quản lí người dùng", "Index", "User")</li>
                     <li>@Html.ActionLink("Liên Hệ", "Contact", "Home")</li>
-                  
+                    <li>@Html.ActionLink("Dòng Sách", "Index", "Books")</li>
+                    <li>@Html.ActionLink("Độc Giả", "Index", "Docgia")</li>
+                    <li>@Html.ActionLink("Mượn sách", "Index", "Muonsach")</li>
+                    <li>@Html.ActionLink("Trả sách", "Index", "Trasach")</li>
+
+
 
 
                 </ul>
