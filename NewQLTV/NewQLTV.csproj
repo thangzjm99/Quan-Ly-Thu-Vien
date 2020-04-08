@@ -153,10 +153,44 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Login.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\image.jfif" />
+    <Content Include="Image\images\bg-adbox.png" />
+    <Content Include="Image\images\bg-footer.png" />
+    <Content Include="Image\images\bg-footnote.jpg" />
+    <Content Include="Image\images\bg-header.jpg" />
+    <Content Include="Image\images\border.png" />
+    <Content Include="Image\images\bride-sideview.jpg" />
+    <Content Include="Image\images\bride.jpg" />
+    <Content Include="Image\images\children.jpg" />
+    <Content Include="Image\images\divorce.jpg" />
+    <Content Include="Image\images\family-large.jpg" />
+    <Content Include="Image\images\family-small.jpg" />
+    <Content Include="Image\images\family.png" />
+    <Content Include="Image\images\frames.png" />
+    <Content Include="Image\images\handshake.jpg" />
+    <Content Include="Image\images\happy.jpg" />
+    <Content Include="Image\images\icons.png" />
+    <Content Include="Image\images\image.jfif" />
+    <Content Include="Image\images\interface.png" />
+    <Content Include="Image\images\laughing.jpg" />
+    <Content Include="Image\images\lew.jfif" />
+    <Content Include="Image\images\lewlew.png" />
+    <Content Include="Image\images\logo.png" />
+    <Content Include="Image\images\meeting.jpg" />
+    <Content Include="Image\images\prenuptial.jpg" />
+    <Content Include="Image\images\smile.jpg" />
+    <Content Include="Image\images\thumb-up.jpg" />
+    <Content Include="Image\images\thumbnail-focus.jpg" />
+    <Content Include="Image\images\thumbnail-frontview.jpg" />
+    <Content Include="Image\images\thumbnail-happy.jpg" />
+    <Content Include="Image\images\thumbnail-sideview.jpg" />
+    <Content Include="Image\images\thumbnail-smile.jpg" />
+    <Content Include="Image\lewlew.png" />
     <Content Include="Image\Screenshot %28584%29.png" />
     <Content Include="Image\Screenshot %28584%29_LI.jpg" />
     <Content Include="Image\Screenshot %28585%29.png" />
@@ -221,6 +255,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\css\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>

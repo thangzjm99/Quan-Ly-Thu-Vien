@@ -162,7 +162,6 @@ C:\Users\Zjm\Documents\GitHub\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.csprojA
 C:\Users\Zjm\Documents\GitHub\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.csproj.CopyComplete
 C:\Users\Zjm\Documents\GitHub\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.dll
 C:\Users\Zjm\Documents\GitHub\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.pdb
-C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\bin\NewQLTV.dll.config
 C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\bin\NewQLTV.dll
 C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\bin\NewQLTV.pdb
 C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\bin\roslyn\csc.exe
@@ -240,7 +239,7 @@ C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\bin\System.Web.W
 C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\bin\Newtonsoft.Json.xml
 C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\bin\Antlr3.Runtime.pdb
 C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.csprojAssemblyReference.cache
-C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.csproj.CopyComplete
 C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.dll
 C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.pdb
+C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\bin\NewQLTV.dll.config
+C:\Users\Nammain\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.csprojResolveAssemblyReference.cache
