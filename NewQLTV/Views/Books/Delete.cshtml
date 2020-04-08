@@ -1,0 +1,89 @@
+﻿@model NewQLTV.Models.DONGSACH
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DONGSACH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MASACH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MASACH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENSACH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENSACH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TACGIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TACGIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SOTRANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOTRANG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THELOAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THELOAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TINHTRANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TINHTRANG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NHAXUATBAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHAXUATBAN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMXUATBAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMXUATBAN)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

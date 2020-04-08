@@ -1,0 +1,73 @@
+﻿@model IEnumerable<NewQLTV.Models.DOCGIA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách độc giả</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table " id="myTable">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.MASINHVIEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TENDOCGIA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GIOITINH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYSINH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LOP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DIACHI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATHETV)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MASINHVIEN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TENDOCGIA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GIOITINH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NGAYSINH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LOP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DIACHI)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MATHETV)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MASINHVIEN }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MASINHVIEN }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MASINHVIEN })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

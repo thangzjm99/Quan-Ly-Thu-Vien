@@ -1,0 +1,83 @@
+﻿@model NewQLTV.Models.DONGSACH
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DONGSACH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MASACH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MASACH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENSACH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENSACH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TACGIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TACGIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SOTRANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOTRANG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THELOAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THELOAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TINHTRANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TINHTRANG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NHAXUATBAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHAXUATBAN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAMXUATBAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAMXUATBAN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MASACH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

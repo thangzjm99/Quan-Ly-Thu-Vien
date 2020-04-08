@@ -1,0 +1,55 @@
+﻿@model IEnumerable<NewQLTV.Models.TRASACH>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Danh sách trả sách</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MAMUONTRA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MASACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DA_TRA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYTRA)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MAMUONTRA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MASACH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DA_TRA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NGAYTRA)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MAMUONTRA }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MAMUONTRA }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MAMUONTRA })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
