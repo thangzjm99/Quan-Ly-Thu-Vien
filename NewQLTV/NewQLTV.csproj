@@ -152,6 +152,14 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\default.css" />
+    <Content Include="Content\fonts.css" />
+    <Content Include="Content\fonts\fontawesome-social-webfont.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\images\bg.jpg" />
+    <Content Include="Content\images\overlay.png" />
+    <Content Include="Content\images\pic01.jpg" />
+    <Content Include="Content\images\pic02.jpg" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
@@ -205,6 +213,13 @@
     <Content Include="Image\Screenshot %28592%29.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\fonts\fontawesome-social-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-social-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-social-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -252,6 +267,7 @@
     <Content Include="Views\Trasach\Delete.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Home\Guide.cshtml" />
+    <Content Include="Views\Shared\_layout2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
