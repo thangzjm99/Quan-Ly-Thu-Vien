@@ -148,6 +148,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\58d2c1fcf2d0331b008b497c.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -160,6 +161,7 @@
     <Content Include="Content\images\overlay.png" />
     <Content Include="Content\images\pic01.jpg" />
     <Content Include="Content\images\pic02.jpg" />
+    <Content Include="Content\images\tải xuống.jpg" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />

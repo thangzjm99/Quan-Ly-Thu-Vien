@@ -19,33 +19,33 @@
     <![endif]-->
 </head>
 <body>
-<div  class="navbar navbar-inverse navbar-fixed-top""> 
+<div  class="navbar navbar-inverse navbar-fixed-top"> 
     <div id="wrapper">
         <div id="header-wrapper">
             <div id="header" class="container">
                 <div id="logo">
-                    <h1><a href="#">Low-Down</a></h1>
-                    <p>Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></p>
+                    @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    <h1><a href="#">Library Management Web</a></h1>
+                    <p>Design by <a href="http://templated.co" rel="nofollow">Group Zô</a></p>
                 </div>
                 <div id="social">
                     <ul class="contact">
-                        <li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
-                        <li><a href="#" class="icon icon-facebook"><span></span></a></li>
-                        <li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
-                        <li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
-                        <li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+                        <li><a href="https://twitter.com/explore" class="icon icon-twitter" target="_blank"><span>Twitter</span></a></li>
+                        <li><a href="https://www.facebook.com/thinhcuu1911" class="icon icon-facebook" target="_blank"><span>FaceBook</span></a></li>
+                        <li><a href="https://mail.google.com/mail/u/0/#inbox" class="icon icon-google-plus" target="_blank"><span>Gmail</span></a></li>
+                        <li><a href="https://github.com/thangzjm99/Quan-Ly-Thu-Vien" class="icon icon-github" target="_blank"><span>GitHub</span></a></li>
+                        <li><a href="https://www.youtube.com/" class="icon icon-youtube" target="_blank"><span>Youtube</span></a></li>
                     </ul>
                 </div>
             </div>
-            
             <div id="menu" class="container">
                 <ul>
-                    <li class="current_page_item"><a href="#" accesskey="1" title="">Homepage</a></li>
-                    <li><a href="#" accesskey="1" title="">Services</a></li>
-                    <li><a href="#" accesskey="2" title="">Our Clients</a></li>
-                    <li><a href="#" accesskey="3" title="">About Us</a></li>
-                    <li><a href="#" accesskey="4" title="">Careers</a></li>
-                    <li><a href="#" accesskey="5" title="">Contact Us</a></li>
+                    <li class="current_page_item"><a href="~/Home/Index" accesskey="1" title="">Homepage</a></li>
+                    <li><a href="~/Books/Index" accesskey="1" title="">Our Books</a></li>
+                    <li><a href="~/Docgia/Index" accesskey="2" title="">Our Readers</a></li>
+                    <li><a href="~/Muonsach/Index" accesskey="3" title="">Book Borrows</a></li>
+                    <li><a href="~/Trasach/Index" accesskey="4" title="">Book Returns</a></li>
+                    <li><a href="~/Home/Contact" accesskey="5" title="">Contact Us</a></li>
                 </ul>
             </div>
         </div>
