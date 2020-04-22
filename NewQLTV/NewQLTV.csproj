@@ -157,6 +157,7 @@
     <Content Include="Assets\js\demo\datatables-demo.js" />
     <Content Include="Assets\js\sb-admin-2.js" />
     <Content Include="Assets\js\sb-admin-2.min.js" />
+    <Content Include="Assets\login.html" />
     <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.js" />
     <Content Include="Assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Assets\vendor\bootstrap\js\bootstrap.js" />
