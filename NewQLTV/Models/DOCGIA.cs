@@ -29,5 +29,7 @@ namespace NewQLTV.Models
         public string DIACHI { get; set; }
 
         public int? MATHETV { get; set; }
+
+        public string image { get; set; }
     }
 }

@@ -2045,6 +2045,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\css\" />
+    <Folder Include="Images\" />
+
     <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
