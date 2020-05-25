@@ -38,7 +38,7 @@ namespace QLThuVienMTA.Controllers
 
         // POST: Docgia/Create
         [HttpPost]
-        public ActionResult Create(DOCGIA dOCGIA, , HttpPostedFileBase uploadImage)
+        public ActionResult Create(DOCGIA dOCGIA,  HttpPostedFileBase uploadImage)
         {
             try
             {
@@ -76,7 +76,7 @@ namespace QLThuVienMTA.Controllers
 
         // POST: Docgia/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, DOCGIA dOCGIA, , HttpPostedFileBase uploadImage)
+        public ActionResult Edit(int id, DOCGIA dOCGIA,  HttpPostedFileBase uploadImage)
         {
             try
             {
