@@ -40,7 +40,7 @@ namespace QLThuVienMTA.Controllers
         [HttpPost]
         public ActionResult Create(DOCGIA dOCGIA,  HttpPostedFileBase uploadImage)
         {
-            try
+            if (Request.Form["image"] != null)
             {
                 string fileName = Path.GetFileNameWithoutExtension(uploadImage.FileName);
                 string extension = Path.GetExtension(uploadImage.FileName);
@@ -48,6 +48,7 @@ namespace QLThuVienMTA.Controllers
                 filePath = filePath + extension;
                 uploadImage.SaveAs(filePath);
                 dOCGIA.image = fileName + extension;
+            }
 
                 using (ModelDbContext modelDbContext = new ModelDbContext())
                 {
@@ -57,11 +58,8 @@ namespace QLThuVienMTA.Controllers
                 // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            
+            
         }
         
         // GET: Docgia/Edit/5
