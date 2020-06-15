@@ -31,6 +31,7 @@ namespace NewQLTV.Models
 
         public int? MATHETV { get; set; }
 
+        [Column(TypeName = "text")]
         public string image { get; set; }
     }
 }

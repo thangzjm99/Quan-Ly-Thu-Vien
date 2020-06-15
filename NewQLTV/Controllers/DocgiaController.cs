@@ -40,15 +40,14 @@ namespace QLThuVienMTA.Controllers
         [HttpPost]
         public ActionResult Create(DOCGIA dOCGIA,  HttpPostedFileBase uploadImage)
         {
-            if (Request.Form["image"] != null)
-            {
+            
                 string fileName = Path.GetFileNameWithoutExtension(uploadImage.FileName);
                 string extension = Path.GetExtension(uploadImage.FileName);
                 string filePath = Path.Combine(Server.MapPath("~/Images"), fileName);
                 filePath = filePath + extension;
                 uploadImage.SaveAs(filePath);
                 dOCGIA.image = fileName + extension;
-            }
+            
 
                 using (ModelDbContext modelDbContext = new ModelDbContext())
                 {
