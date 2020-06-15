@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Thêm mới", "Create")
 </p>
-<table class="table" id="myTable">
+<table class="table" id="myTable" style="width:100%">
     <thead>
         <tr>
             <th>
@@ -78,5 +78,35 @@
 
         }
     </tbody>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MASACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TENSACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TACGIA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SOTRANG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.THELOAI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TINHTRANG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NHAXUATBAN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NAMXUATBAN)
+            </th>
+            <th style="display: none"></th>
+            <th style="display: none"></th>
+        </tr>
+    </tfoot>
 
 </table>
