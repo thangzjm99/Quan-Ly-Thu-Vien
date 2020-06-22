@@ -143,6 +143,8 @@
     <Compile Include="Models\DONGSACH.cs" />
     <Compile Include="Models\ModelDbContext.cs" />
     <Compile Include="Models\MUONSACK.cs" />
+    <Compile Include="Models\THELOAI.cs" />
+    <Compile Include="Models\THETHUVIEN.cs" />
     <Compile Include="Models\TRASACH.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2018,7 +2020,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Books\Index.cshtml" />
     <Content Include="Views\Books\Details.cshtml" />
     <Content Include="Views\Books\Create.cshtml" />
     <Content Include="Views\Books\Edit.cshtml" />
@@ -2041,6 +2042,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Home\Guide.cshtml" />
     <Content Include="Views\Shared\_layout2.cshtml" />
+    <Content Include="Views\Books\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

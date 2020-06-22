@@ -5,17 +5,14 @@
     Layout = "~/Views/Shared/_layout2.cshtml";
 }
 
-<h2>Bảng Dòng Sách</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Thêm mới", "Create")
+    @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table" id="myTable" style="width:100%">
+<table class="table" id="myTable" style="width: 100%">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MASACH)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.TENSACH)
             </th>
@@ -37,17 +34,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.NAMXUATBAN)
             </th>
+
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MASACH)
-                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.TENSACH)
                 </td>
@@ -69,44 +63,16 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.NAMXUATBAN)
                 </td>
+
                 <td>
                     @Html.ActionLink("Sửa", "Edit", new { id = item.MASACH }) |
-                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MASACH }) |
+                    @Html.ActionLink("Chi tiết ", "Details", new { id = item.MASACH }) |
                     @Html.ActionLink("Xóa", "Delete", new { id = item.MASACH })
                 </td>
             </tr>
 
         }
     </tbody>
-    <tfoot>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MASACH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TENSACH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TACGIA)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SOTRANG)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.THELOAI)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TINHTRANG)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NHAXUATBAN)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NAMXUATBAN)
-            </th>
-            <th style="display: none"></th>
-            <th style="display: none"></th>
-        </tr>
-    </tfoot>
+
 
 </table>

@@ -46,7 +46,7 @@ namespace QLThuVienMTA.Controllers
                 string filePath = Path.Combine(Server.MapPath("~/Images"), fileName);
                 filePath = filePath + extension;
                 uploadImage.SaveAs(filePath);
-                dOCGIA.image = fileName + extension;
+                dOCGIA.IMAGE = fileName + extension;
             
 
                 using (ModelDbContext modelDbContext = new ModelDbContext())
@@ -79,9 +79,9 @@ namespace QLThuVienMTA.Controllers
             {
                 if (Request.Form["image"] != null)
                 {
-                    if (dOCGIA.image != null)
+                    if (dOCGIA.IMAGE != null)
                     {
-                        string filePathOld = Path.Combine(Server.MapPath("~/Images"), dOCGIA.image);
+                        string filePathOld = Path.Combine(Server.MapPath("~/Images"), dOCGIA.IMAGE);
                         System.IO.File.Delete(filePathOld);
                     }
 
@@ -90,7 +90,7 @@ namespace QLThuVienMTA.Controllers
                     string filePathNew = Path.Combine(Server.MapPath("~/Images"), fileName);
                     filePathNew = filePathNew + extension;
                     uploadImage.SaveAs(filePathNew);
-                    dOCGIA.image = fileName + extension;
+                    dOCGIA.IMAGE = fileName + extension;
                 }
                 using (ModelDbContext modelDbContext = new ModelDbContext())
                 {
@@ -125,9 +125,9 @@ namespace QLThuVienMTA.Controllers
                 {
                     DOCGIA dOCGIA = modeldbContext.DOCGIAs.Where(x => x.MASINHVIEN == id).FirstOrDefault();
 
-                    if (dOCGIA.image != null)
+                    if (dOCGIA.IMAGE != null)
                     {
-                        string filePath = Path.Combine(Server.MapPath("~/Images"), dOCGIA.image);
+                        string filePath = Path.Combine(Server.MapPath("~/Images"), dOCGIA.IMAGE);
                         System.IO.File.Delete(filePath);
                     }
 

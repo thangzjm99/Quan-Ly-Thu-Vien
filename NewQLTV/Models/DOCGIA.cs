@@ -5,7 +5,6 @@ namespace NewQLTV.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-    using System.Linq;
 
     [Table("DOCGIA")]
     public partial class DOCGIA
@@ -31,7 +30,9 @@ namespace NewQLTV.Models
 
         public int? MATHETV { get; set; }
 
-        
-        public string image { get; set; }
+        [Column(TypeName = "text")]
+        public string IMAGE { get; set; }
+
+        public virtual THETHUVIEN THETHUVIEN { get; set; }
     }
 }

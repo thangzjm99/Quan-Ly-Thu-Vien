@@ -9,6 +9,7 @@ namespace NewQLTV.Models
     [Table("User")]
     public partial class User
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public long ID { get; set; }
 
         [StringLength(100)]
