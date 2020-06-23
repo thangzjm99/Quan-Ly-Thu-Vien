@@ -1,0 +1,51 @@
+﻿@model IEnumerable<NewQLTV.Models.THETHUVIEN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="myTable" width="100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MATHETV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYBATDAU)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYKETTHUC)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MATHETV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NGAYBATDAU)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NGAYKETTHUC)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MATHETV }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MATHETV }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MATHETV })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

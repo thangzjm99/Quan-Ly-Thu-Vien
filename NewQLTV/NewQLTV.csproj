@@ -132,6 +132,7 @@
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\DocgiaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LibCardsController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MuonsachController.cs" />
     <Compile Include="Controllers\TrasachController.cs" />
@@ -2043,6 +2044,11 @@
     <Content Include="Views\Home\Guide.cshtml" />
     <Content Include="Views\Shared\_layout2.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
+    <Content Include="Views\LibCards\Index.cshtml" />
+    <Content Include="Views\LibCards\Details.cshtml" />
+    <Content Include="Views\LibCards\Create.cshtml" />
+    <Content Include="Views\LibCards\Edit.cshtml" />
+    <Content Include="Views\LibCards\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
