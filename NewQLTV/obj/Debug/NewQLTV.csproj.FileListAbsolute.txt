@@ -491,3 +491,4 @@ C:\Users\Nammain\Documents\GitHub\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.csp
 C:\Users\Nammain\Documents\GitHub\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.csproj.CopyComplete
 C:\Users\Nammain\Documents\GitHub\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.dll
 C:\Users\Nammain\Documents\GitHub\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.pdb
+C:\Users\molap\Desktop\TTN\Quan-Ly-Thu-Vien\NewQLTV\obj\Debug\NewQLTV.csproj.CoreCompileInputs.cache
