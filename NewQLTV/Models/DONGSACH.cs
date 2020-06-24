@@ -29,10 +29,9 @@ namespace NewQLTV.Models
         public int? SOTRANG { get; set; }
 
         [StringLength(100)]
-        public string THELOAI { get; set; }
+        public string MATHELOAI { get; set; }
 
-        [StringLength(100)]
-        public string TINHTRANG { get; set; }
+        public int? MATINHTRANG { get; set; }
 
         [StringLength(100)]
         public string NHAXUATBAN { get; set; }
@@ -40,6 +39,10 @@ namespace NewQLTV.Models
         [StringLength(100)]
         public string NAMXUATBAN { get; set; }
 
+        [Column(TypeName = "text")]
+        public string IMAGE { get; set; }
+
+        public virtual TINHTRANGSACH TINHTRANGSACH { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MUONSACK> MUONSACKs { get; set; }

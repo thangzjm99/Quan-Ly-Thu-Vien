@@ -17,6 +17,7 @@ namespace NewQLTV.Models
         public virtual DbSet<MUONSACK> MUONSACKs { get; set; }
         public virtual DbSet<THELOAI> THELOAIs { get; set; }
         public virtual DbSet<THETHUVIEN> THETHUVIENs { get; set; }
+        public virtual DbSet<TINHTRANGSACH> TINHTRANGSACHes { get; set; }
         public virtual DbSet<TRASACH> TRASACHes { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
@@ -26,7 +27,9 @@ namespace NewQLTV.Models
                 .Property(e => e.IMAGE)
                 .IsUnicode(false);
 
-            
+            modelBuilder.Entity<DONGSACH>()
+                .Property(e => e.IMAGE)
+                .IsUnicode(false);
         }
     }
 }

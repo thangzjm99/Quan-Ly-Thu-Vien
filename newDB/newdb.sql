@@ -89,8 +89,8 @@ CREATE TABLE [dbo].[DONGSACH](
 [TENSACH] [NVARCHAR](100) NULL,
 [TACGIA] [NVARCHAR](100) NULL,
 [SOTRANG] [INT] NULL,
-[THELOAI] [NVARCHAR](100) NULL,
-[TINHTRANG] [NVARCHAR](100) NULL,
+[MATHELOAI] [NVARCHAR](100) NULL,
+[MATINHTRANG] [INT] NULL,
 [NHAXUATBAN] [NVARCHAR](100) NULL,
 [NAMXUATBAN] [NVARCHAR](100) NULL ,
 [IMAGE] [TEXT] NULL
@@ -100,6 +100,20 @@ CREATE TABLE [dbo].[DONGSACH](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TINHTRANGSACH](
+[MATINHTRANG] [INT] NOT NULL,
+[TINHTRANGSACH] [NVARCHAR](100) NULL,
+[GHICHU] [NVARCHAR](100) NULL
+ CONSTRAINT [PK_TINHTRANGSACH] PRIMARY KEY CLUSTERED 
+(
+	[MATINHTRANG] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] 
+GO
 
 
 SET ANSI_NULLS ON
@@ -107,11 +121,11 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[THELOAI](
-[THELOAI] [NVARCHAR](100) NOT NULL ,
-[MATHELOAI] [INT] NULL
+[MATHELOAI] [INT] NOT NULL ,
+[TENTHELOAI] [NVARCHAR](100) NULL
  CONSTRAINT [PK_THELOAI] PRIMARY KEY CLUSTERED 
 (
-	[THELOAI] ASC
+	[MATHELOAI] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] 
 GO
@@ -177,6 +191,22 @@ CREATE TABLE [dbo].[MUONSACK](
 ) ON [PRIMARY] 
 GO
 
+--SET ANSI_NULLS ON
+--GO
+--SET QUOTED_IDENTIFIER ON
+--GO
+--CREATE TABLE [dbo].[CTMUONTRASACH](
+--[MAMUONTRA] [INT] NOT NULL,
+--[MATHETV] [INT] NULL,
+--[TENSINHVIEN] [INT] NULL,
+--[NGAYMUON] [DATE] NULL,
+--[NGAYTRA] [DATE] NULL
+-- CONSTRAINT [PK_CTMUONTRASACH] PRIMARY KEY CLUSTERED 
+--(
+--	[MAMUONTRA] ASC
+--)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+--) ON [PRIMARY] 
+--GO
 
 SET ANSI_NULLS ON
 GO
@@ -215,31 +245,31 @@ CREATE TABLE [dbo].[User](
 GO
 
 
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (1122 , N'Vật lí đại cương 1', N'Ðỗ Ngọc Uẩn', 300 , N'Vật lí', N'Nhà xuất bản giáo dục VN' , 1997)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (2233 , N'Vật lý đại cương 2', N'Ðỗ Ngọc Uẩn', 238 , N'Vật lí', N'Nhà xuất bản giáo dục VN' , 1997)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (3344 , N'Giải tích 1', N'Nguyễn Thị Xuân Anh', 555 , N'Toán h?c', N'Nhà xuất bản ÐH Bách Khoa HCM' , 2004)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (4455 , N'Giải tích 2', N'Lê Xuân Ðới', 340 , N'Toán học', N'Nhà xuất bản ÐH Bách Khoa HCM' , 2006)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (5566 , N'Toán rời rạc', N'Ðinh La Thăng', 389 , N'Toán học', N'Nhà xuất bản giáo dục VN' , 2003)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (6677 , N'Lập trình cơ bản', N'Tạ Ðình Thanh', 155 , N'Công nghệ thông tin', N'Nhà xuất bản HVKTQS' , 1990)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (7788 , N'Hình họa và vẽ kỹ thuật cơ bản + BTL', N'Nguyễn Ðình Sinh', 222 , N'Vật lí', N'Nhà xuất bản giáo dục VN' , 1997)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (8899 , N'Những nguyên lý cơ bản của chủ nghĩa Mác-Lênin 1', N'Truong Van Thái Quý', 300 , N'Triết học', N'Nhà xuất bản giáo dục VN' , 1999)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (9900 , N'Những nguyên lý cơ bản của chủ nghĩa Mác-Lênin 2', N'Nguyễn Phong Hồng Duy', 899 , N'Triết học', N'Nhà xuất bản giáo dục VN' , 2010)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (9988 , N'Đường lối quốc phòng và an ninh của Đảng cộng sản Việt Nam', N'Trịnh Công Son', 232 , N'Lịc sử', N'Nhà xuất bản HVKTQS' , 1997)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (8877 , N'Tư tưởng Hồ Chí Minh + Tiểu luận', N'Hà Anh Tuấn', 122 , N'Triết học', N'Nhà xuất bản ÐH Bách Hoa HN' , 1980)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (7766 , N'Ngôn ngữ lập trình 1', N'Trần Ðình Trọng', 787 , N'Công nghệ thông tin', N'Nhà xuất bản công nghệ VN' , 2012)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (6655 , N'Ngôn ngữ lập trình 2', N'Quế Ngọc Hải', 666 , N'Công nghệ thông tin', N'Nhà xuất bản công nghệ VN' , 2015)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (5544 , N'Cơ sở dữ liệu', N'Trịnh Công Minh', 300 , N'Công nghệ thông tin', N'Nhà xuất bản cơ sở dữ liệu VN' , 1987)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (4433 , N'Xác xuất thống kê', N'Nguyễn Thị Thu Hà', 676, N'Toán học', N'Nhà xuất bản giáo dục VN' , 2020)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (3322 , N'Lý thuyết hệ điều hành', N'Nhâm Mạnh Hùng', 212 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2010)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (2211 , N'An toàn thông tin', N'Nguyễn Việt Anh', 3233 , N'An toàn thông tin', N'Nhà xuất bản công nghệ VN' , 2016)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (1100 , N'Mạng máy tính', N'Ðỗ Duy Minh', 455 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2011)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (1212 , N'Cấu trúc máy tính', N'Ðỗ Quang Hà', 420 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2019)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (2323 , N'Kinh tế công nghiệp', N'Ðặng Van Lâm', 80, N'Kinh tế', N'Nhà xuất bản kinh tế VN' , 1990)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (3434 , N'Mạng viễn thông', N'Quang Hải', 502 , N'Điện tử viễn thông', N'Nhà xuất bản viễn thông VN' , 1996)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (4545 , N'Tương tác nguời máy', N'Hoàng Ðức', 378 , N'Công nghệ thông tin', N'Nhà xuất bản công nghệ VN' , 2008)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (5656 , N'Xây dựng và quản lý hệ thống', N'Ðỗ Ngọc Thịnh', 567 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2014)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (6767 , N'Công nghệ web', N'Hà Minh Thái', 560 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2020)
-INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [THELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (7878 , N'Toán chuyên dề', N'Hà Huy Tập', 322 , N'Toán học', N'Nhà xuất bản ÐH Bách Khoa HN' , 2007)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (1122 , N'Vật lí đại cương 1', N'Ðỗ Ngọc Uẩn', 300 , N'Vật lí', N'Nhà xuất bản giáo dục VN' , 1997)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (2233 , N'Vật lý đại cương 2', N'Ðỗ Ngọc Uẩn', 238 , N'Vật lí', N'Nhà xuất bản giáo dục VN' , 1997)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (3344 , N'Giải tích 1', N'Nguyễn Thị Xuân Anh', 555 , N'Toán h?c', N'Nhà xuất bản ÐH Bách Khoa HCM' , 2004)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (4455 , N'Giải tích 2', N'Lê Xuân Ðới', 340 , N'Toán học', N'Nhà xuất bản ÐH Bách Khoa HCM' , 2006)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (5566 , N'Toán rời rạc', N'Ðinh La Thăng', 389 , N'Toán học', N'Nhà xuất bản giáo dục VN' , 2003)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (6677 , N'Lập trình cơ bản', N'Tạ Ðình Thanh', 155 , N'Công nghệ thông tin', N'Nhà xuất bản HVKTQS' , 1990)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (7788 , N'Hình họa và vẽ kỹ thuật cơ bản + BTL', N'Nguyễn Ðình Sinh', 222 , N'Vật lí', N'Nhà xuất bản giáo dục VN' , 1997)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (8899 , N'Những nguyên lý cơ bản của chủ nghĩa Mác-Lênin 1', N'Truong Van Thái Quý', 300 , N'Triết học', N'Nhà xuất bản giáo dục VN' , 1999)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (9900 , N'Những nguyên lý cơ bản của chủ nghĩa Mác-Lênin 2', N'Nguyễn Phong Hồng Duy', 899 , N'Triết học', N'Nhà xuất bản giáo dục VN' , 2010)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (9988 , N'Đường lối quốc phòng và an ninh của Đảng cộng sản Việt Nam', N'Trịnh Công Son', 232 , N'Lịc sử', N'Nhà xuất bản HVKTQS' , 1997)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (8877 , N'Tư tưởng Hồ Chí Minh + Tiểu luận', N'Hà Anh Tuấn', 122 , N'Triết học', N'Nhà xuất bản ÐH Bách Hoa HN' , 1980)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (7766 , N'Ngôn ngữ lập trình 1', N'Trần Ðình Trọng', 787 , N'Công nghệ thông tin', N'Nhà xuất bản công nghệ VN' , 2012)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (6655 , N'Ngôn ngữ lập trình 2', N'Quế Ngọc Hải', 666 , N'Công nghệ thông tin', N'Nhà xuất bản công nghệ VN' , 2015)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (5544 , N'Cơ sở dữ liệu', N'Trịnh Công Minh', 300 , N'Công nghệ thông tin', N'Nhà xuất bản cơ sở dữ liệu VN' , 1987)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (4433 , N'Xác xuất thống kê', N'Nguyễn Thị Thu Hà', 676, N'Toán học', N'Nhà xuất bản giáo dục VN' , 2020)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (3322 , N'Lý thuyết hệ điều hành', N'Nhâm Mạnh Hùng', 212 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2010)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (2211 , N'An toàn thông tin', N'Nguyễn Việt Anh', 3233 , N'An toàn thông tin', N'Nhà xuất bản công nghệ VN' , 2016)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (1100 , N'Mạng máy tính', N'Ðỗ Duy Minh', 455 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2011)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (1212 , N'Cấu trúc máy tính', N'Ðỗ Quang Hà', 420 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2019)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (2323 , N'Kinh tế công nghiệp', N'Ðặng Van Lâm', 80, N'Kinh tế', N'Nhà xuất bản kinh tế VN' , 1990)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (3434 , N'Mạng viễn thông', N'Quang Hải', 502 , N'Điện tử viễn thông', N'Nhà xuất bản viễn thông VN' , 1996)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (4545 , N'Tương tác nguời máy', N'Hoàng Ðức', 378 , N'Công nghệ thông tin', N'Nhà xuất bản công nghệ VN' , 2008)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (5656 , N'Xây dựng và quản lý hệ thống', N'Ðỗ Ngọc Thịnh', 567 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2014)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (6767 , N'Công nghệ web', N'Hà Minh Thái', 560 , N'Công nghệ máy tính', N'Nhà xuất bản công nghệ VN' , 2020)
+INSERT [dbo].[DONGSACH] ([MASACH], [TENSACH], [TACGIA], [SOTRANG], [MATHELOAI], [NHAXUATBAN], [NAMXUATBAN]) VALUES (7878 , N'Toán chuyên dề', N'Hà Huy Tập', 322 , N'Toán học', N'Nhà xuất bản ÐH Bách Khoa HN' , 2007)
 
 INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (17150101, N'Nguyễn Minh Ðức' , N'Nam', CAST (N'1998-2-1' AS Date), N'CNTT15', N'554, Ngõ 232 Phạm Văn Ðồng, Hà Nội')
 INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (17150102, N'Nguyễn Khắc Ðức Quân' , N'Nam', CAST (N'1999-10-10' AS Date), N'CNTT16A', N'266, Lê Trọng Tấn , Hà Nội')
@@ -260,7 +290,7 @@ INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], 
 INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (17150117, N'Nguyễn Minh Châu' , N'Nữ', CAST (N'1998-8-7' AS Date), N'CNTT15', N'133B Ký Con, P. Nguyễn Thái Bình, Quận 1, TP. HCM')
 INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (17150118, N'Nguyễn Khắc Ðức Thống' , N'Nam', CAST (N'1999-5-12' AS Date), N'CNTT16A', N'401 Thống Nhất, Thị xã Lagi, Bình Thuận')
 INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (17150119, N'Đỗ Vân Anh' , N'Nữ', CAST (N'1998-10-11' AS Date), N'CNTT15', N'Z35 Đào Tấn, Tp. Phan Thiết, Bình Thuận')
-INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (17150101, N'Nguyễn Thanh Hà' , N'Nữ', CAST (N'1999-12-28' AS Date), N'CNTT16A', N'Đường Số 9, Dĩ An, Bình Dương')
+INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (171501221, N'Nguyễn Thanh Hà' , N'Nữ', CAST (N'1999-12-28' AS Date), N'CNTT16A', N'Đường Số 9, Dĩ An, Bình Dương')
 INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (17150120, N'Đặng Ngô Hiền' , N'Nữ', CAST (N'1998-1-19' AS Date), N'CNTT15', N'Nguyễn Du, P.Nông Trang,Tp.Việt Trì,Phú Thọ')
 INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (17150121, N'Nguyễn Tuấn Hưng' , N'Nam', CAST (N'1999-1-5' AS Date), N'CNTT16A', N'Big C Việt Trì, Nguyễn Tất Thành, Phú Thọ')
 INSERT [dbo].[DOCGIA] ([MASINHVIEN], [TENDOCGIA], [GIOITINH], [NGAYSINH],[LOP], [DIACHI]) VALUES (17150122, N'Nguyễn Đình Minh Mẫn' , N'Nữ', CAST (N'1998-5-11' AS Date), N'CNTT15', N'55 Trần Cao Vân, Tp. Qui Nhơn, Bình Định')
@@ -282,12 +312,19 @@ INSERT [dbo].[TRASACH] ([MATRASACH],[MAMUONTRA], [MASACH], [DA_TRA],[NGAYTRA]) V
 INSERT [dbo].[TRASACH] ([MATRASACH],[MAMUONTRA], [MASACH], [DA_TRA],[NGAYTRA]) VALUES (4,4,4455,1 ,CAST (N'2020-2-2' AS DATE))
 INSERT [dbo].[TRASACH] ([MATRASACH],[MAMUONTRA], [MASACH], [DA_TRA],[NGAYTRA]) VALUES (5,5,5566,1 ,CAST (N'2020-2-3' AS DATE))
 
-ALTER TABLE [dbo].[DONGSACH]  WITH CHECK ADD  CONSTRAINT [FK_DONGSACH_THELOAI] FOREIGN KEY([THELOAI])
-REFERENCES [dbo].[THELOAI] ([THELOAI])
+ALTER TABLE [dbo].[DONGSACH]  WITH CHECK ADD  CONSTRAINT [FK_DONGSACH_THELOAI] FOREIGN KEY([MATHELOAI])
+REFERENCES [dbo].[THELOAI] ([MATHELOAI])
 ON UPDATE CASCADE
 ON DELETE NO ACTION
 GO
 ALTER TABLE [dbo].[DONGSACH] CHECK CONSTRAINT [FK_DONGSACH_THELOAI]
+GO	
+ALTER TABLE [dbo].[DONGSACH]  WITH CHECK ADD  CONSTRAINT [FK_DONGSACH_TINHTRANGSACH] FOREIGN KEY([MATINHTRANG])
+REFERENCES [dbo].[TINHTRANGSACH] ([MATINHTRANG])
+ON UPDATE CASCADE
+ON DELETE NO ACTION
+GO
+ALTER TABLE [dbo].[DONGSACH] CHECK CONSTRAINT [FK_DONGSACH_TINHTRANGSACH]
 GO	
 ALTER TABLE [dbo].[MUONSACK]  WITH CHECK ADD  CONSTRAINT [FK_MUONSACK_DONGSACH] FOREIGN KEY([MASACH])
 REFERENCES [dbo].[DONGSACH] ([MASACH])
@@ -317,11 +354,18 @@ ON DELETE NO ACTION
 GO
 ALTER TABLE [dbo].[DOCGIA] CHECK CONSTRAINT [FK_DOCGIA_THETHUVIEN]
 GO	
---ALTER TABLE [dbo].[MUONSACK]  WITH CHECK ADD  CONSTRAINT [FK_MUONSACK_TRASACH] FOREIGN KEY([MAMUONTRA])
---REFERENCES [dbo].[TRASACH] ([MAMUONTRA])
---ON UPDATE CASCADE
---ON DELETE CASCADE
+--ALTER TABLE [dbo].[MUONSACK]  WITH CHECK ADD  CONSTRAINT [FK_MUONSACK_CTMUONTRASACH] FOREIGN KEY([MAMUONTRA])
+--REFERENCES [dbo].[CTMUONTRASACH] ([MAMUONTRA])
+--ON UPDATE NO ACTION
+--ON DELETE NO ACTION
 --GO
---ALTER TABLE [dbo].[MUONSACK] CHECK CONSTRAINT [FK_MUONSACK_TRASACH]
+--ALTER TABLE [dbo].[MUONSACK] CHECK CONSTRAINT [FK_MUONSACK_CTMUONTRASACH]
+--GO	
+--ALTER TABLE [dbo].[TRASACK]  WITH CHECK ADD  CONSTRAINT [FK_TRASACK_CTMUONTRASACH] FOREIGN KEY([MAMUONTRA])
+--REFERENCES [dbo].[CTMUONTRASACH] ([MAMUONTRA])
+--ON UPDATE NO ACTION
+--ON DELETE NO ACTION
+--GO
+--ALTER TABLE [dbo].[TRASACK] CHECK CONSTRAINT [FK_MUONSACK_CTMUONTRASACH]
 --GO	
 

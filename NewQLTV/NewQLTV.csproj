@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BooksController.cs" />
+    <Compile Include="Controllers\BookStatesController.cs" />
     <Compile Include="Controllers\DocgiaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibCardsController.cs" />
@@ -146,6 +147,7 @@
     <Compile Include="Models\MUONSACK.cs" />
     <Compile Include="Models\THELOAI.cs" />
     <Compile Include="Models\THETHUVIEN.cs" />
+    <Compile Include="Models\TINHTRANGSACH.cs" />
     <Compile Include="Models\TRASACH.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2049,6 +2051,11 @@
     <Content Include="Views\LibCards\Create.cshtml" />
     <Content Include="Views\LibCards\Edit.cshtml" />
     <Content Include="Views\LibCards\Delete.cshtml" />
+    <Content Include="Views\BookStates\Index.cshtml" />
+    <Content Include="Views\BookStates\Details.cshtml" />
+    <Content Include="Views\BookStates\Create.cshtml" />
+    <Content Include="Views\BookStates\Edit.cshtml" />
+    <Content Include="Views\BookStates\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

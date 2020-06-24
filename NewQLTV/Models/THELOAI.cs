@@ -10,10 +10,9 @@ namespace NewQLTV.Models
     public partial class THELOAI
     {
         [Key]
-        [Column("THELOAI")]
         [StringLength(100)]
-        public string THELOAI1 { get; set; }
+        public string MATHELOAI { get; set; }
 
-        public int? MATHELOAI { get; set; }
+        public int? TENTHELOAI { get; set; }
     }
 }
