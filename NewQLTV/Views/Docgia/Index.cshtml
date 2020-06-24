@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("Thêm mới", "Create")
 </p>
-<table class="table" id="myTable" style="width: 100%">
+<table class="table" id="myTable" width="100%">
     <thead>
         <tr>
 
@@ -38,9 +38,8 @@
             <th>
                 @Html.DisplayNameFor(model => model.IMAGE)
             </th>
-            <th>
-               
-            </th>
+           
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -76,6 +75,7 @@
                     @Html.ActionLink("Chi tiết", "Details", new { id = item.MASINHVIEN }) |
                     @Html.ActionLink("Xóa", "Delete", new { id = item.MASINHVIEN })
                 </td>
+                
             </tr>
         }
     </tbody>
@@ -106,9 +106,8 @@
             <th>
                 @Html.DisplayNameFor(model => model.IMAGE)
             </th>
-            <th>
-                
-            </th>
+            
+            <th></th>
         </tr>
     </tfoot>
 </table>
