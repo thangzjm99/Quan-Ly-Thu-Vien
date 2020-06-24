@@ -1810,6 +1810,17 @@
     <Content Include="Image\images\thumbnail-sideview.jpg" />
     <Content Include="Image\images\thumbnail-smile.jpg" />
     <Content Include="Image\lewlew.png" />
+    <Content Include="Image\Screenshot %28471%29.png" />
+    <Content Include="Image\Screenshot %28471%29_LI.jpg" />
+    <Content Include="Image\Screenshot %28472%29.png" />
+    <Content Include="Image\Screenshot %28472%29_LI.jpg" />
+    <Content Include="Image\Screenshot %28473%29.png" />
+    <Content Include="Image\Screenshot %28473%29_LI.jpg" />
+    <Content Include="Image\Screenshot %28474%29.png" />
+    <Content Include="Image\Screenshot %28475%29.png" />
+    <Content Include="Image\Screenshot %28476%29.png" />
+    <Content Include="Image\Screenshot %28477%29.png" />
+    <Content Include="Image\Screenshot %28478%29.png" />
     <Content Include="Image\Screenshot %28584%29.png" />
     <Content Include="Image\Screenshot %28584%29_LI.jpg" />
     <Content Include="Image\Screenshot %28585%29.png" />
