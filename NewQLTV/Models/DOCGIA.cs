@@ -29,5 +29,10 @@ namespace NewQLTV.Models
         public string DIACHI { get; set; }
 
         public int? MATHETV { get; set; }
+
+        [Column(TypeName = "text")]
+        public string IMAGE { get; set; }
+
+        public virtual THETHUVIEN THETHUVIEN { get; set; }
     }
 }

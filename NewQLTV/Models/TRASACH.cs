@@ -11,7 +11,9 @@ namespace NewQLTV.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MAMUONTRA { get; set; }
+        public int MATRASACH { get; set; }
+
+        public int? MAMUONTRA { get; set; }
 
         public int? MASACH { get; set; }
 
@@ -19,5 +21,7 @@ namespace NewQLTV.Models
 
         [Column(TypeName = "date")]
         public DateTime? NGAYTRA { get; set; }
+
+        public virtual DONGSACH DONGSACH { get; set; }
     }
 }

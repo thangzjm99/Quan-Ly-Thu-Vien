@@ -9,6 +9,13 @@ namespace NewQLTV.Models
     [Table("DONGSACH")]
     public partial class DONGSACH
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DONGSACH()
+        {
+            MUONSACKs = new HashSet<MUONSACK>();
+            TRASACHes = new HashSet<TRASACH>();
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MASACH { get; set; }
@@ -22,15 +29,25 @@ namespace NewQLTV.Models
         public int? SOTRANG { get; set; }
 
         [StringLength(100)]
-        public string THELOAI { get; set; }
+        public string MATHELOAI { get; set; }
 
-        [StringLength(100)]
-        public string TINHTRANG { get; set; }
+        public int? MATINHTRANG { get; set; }
 
         [StringLength(100)]
         public string NHAXUATBAN { get; set; }
 
         [StringLength(100)]
         public string NAMXUATBAN { get; set; }
+
+        [Column(TypeName = "text")]
+        public string IMAGE { get; set; }
+
+        public virtual TINHTRANGSACH TINHTRANGSACH { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MUONSACK> MUONSACKs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TRASACH> TRASACHes { get; set; }
     }
 }

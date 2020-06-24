@@ -17,7 +17,10 @@
                 @Html.DisplayNameFor(model => model.MAMUONTRA)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MASINHVIEN)
+                @Html.DisplayNameFor(model => model.MAMUONSACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATHETV)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.MASACH)
@@ -37,7 +40,10 @@
                     @Html.DisplayFor(modelItem => item.MAMUONTRA)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.MASINHVIEN)
+                    @Html.DisplayFor(modelItem => item.MAMUONSACH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MATHETV)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.MASACH)
@@ -53,5 +59,24 @@
             </tr>
         }
     </tbody>
-
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MAMUONTRA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MAMUONSACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATHETV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MASACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYMUON)
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
 </table>

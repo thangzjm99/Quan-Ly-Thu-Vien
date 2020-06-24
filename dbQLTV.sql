@@ -1,5 +1,7 @@
-﻿USE QLThuVienHVKTQS
+﻿USE LibManagementMTA
 GO
+Alter table DOCGIA
+Alter column [image] [text]
 
 SET ANSI_NULLS ON
 GO

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<NewQLTV.Models.TINHTRANGSACH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="myTable" width="100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MATINHTRANG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TINHTRANGSACH1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GHICHU)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MATINHTRANG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TINHTRANGSACH1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GHICHU)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MATINHTRANG }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MATINHTRANG }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MATINHTRANG })
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MATINHTRANG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TINHTRANGSACH1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GHICHU)
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
+
+</table>

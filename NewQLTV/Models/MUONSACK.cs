@@ -9,17 +9,21 @@ namespace NewQLTV.Models
     [Table("MUONSACK")]
     public partial class MUONSACK
     {
-        public int? MAMUONTRA { get; set; }
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MATHETV { get; set; }
+        public int MAMUONSACH { get; set; }
 
-        public int? MASINHVIEN { get; set; }
+        public int? MAMUONTRA { get; set; }
+
+        public int? MATHETV { get; set; }
 
         public int? MASACH { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? NGAYMUON { get; set; }
+
+        public virtual DONGSACH DONGSACH { get; set; }
+
+        public virtual THETHUVIEN THETHUVIEN { get; set; }
     }
 }

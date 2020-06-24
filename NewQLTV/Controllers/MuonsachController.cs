@@ -105,7 +105,7 @@ namespace QLThuVienMTA.Controllers
             {
                 using (ModelDbContext modeldbContext = new ModelDbContext())
                 {
-                    MUONSACK mUONSACK = modeldbContext.MUONSACKs.Where(x => x.MASINHVIEN == id).FirstOrDefault();
+                    MUONSACK mUONSACK = modeldbContext.MUONSACKs.Where(x => x.MAMUONSACH == id).FirstOrDefault();
                     modeldbContext.MUONSACKs.Remove(mUONSACK);
                     modeldbContext.SaveChanges();
                 }
