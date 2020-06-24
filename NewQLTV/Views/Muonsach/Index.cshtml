@@ -1,0 +1,82 @@
+﻿@model IEnumerable<NewQLTV.Models.MUONSACK>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout2.cshtml";
+}
+
+<h2>Danh sách mượn sách</h2>
+
+<p>
+    @Html.ActionLink("Thêm mới", "Create")
+</p>
+<table class="table" id="myTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MAMUONTRA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MAMUONSACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATHETV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MASACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYMUON)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MAMUONTRA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MAMUONSACH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MATHETV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MASACH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NGAYMUON)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MAMUONSACH }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MAMUONSACH }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MAMUONSACH })
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MAMUONTRA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MAMUONSACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATHETV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MASACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NGAYMUON)
+            </th>
+            <th></th>
+        </tr>
+    </tfoot>
+</table>

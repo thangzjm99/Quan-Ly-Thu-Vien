@@ -1,0 +1,42 @@
+﻿@model NewQLTV.Models.TINHTRANGSACH
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_layout2.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TINHTRANGSACH</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MATINHTRANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MATINHTRANG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TINHTRANGSACH1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TINHTRANGSACH1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GHICHU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GHICHU)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MATINHTRANG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

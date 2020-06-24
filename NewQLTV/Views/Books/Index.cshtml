@@ -1,0 +1,117 @@
+﻿@model IEnumerable<NewQLTV.Models.DONGSACH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout2.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="myTable" style="width: 100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MASACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TENSACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TACGIA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SOTRANG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATHELOAI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATINHTRANG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NHAXUATBAN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NAMXUATBAN)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MASACH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TENSACH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TACGIA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SOTRANG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MATHELOAI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MATINHTRANG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NHAXUATBAN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NAMXUATBAN)
+            </td>
+
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { id = item.MASACH }) |
+                @Html.ActionLink("Chi tiết ", "Details", new { id = item.MASACH }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.MASACH })
+            </td>
+        </tr>
+
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MASACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TENSACH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TACGIA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SOTRANG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATHELOAI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MATINHTRANG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NHAXUATBAN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NAMXUATBAN)
+            </th>
+
+
+            <th>
+
+            </th>
+        </tr>
+    </tfoot>
+
+</table>
