@@ -25,7 +25,7 @@ namespace QLThuVienMTA.Controllers
             using (ModelDbContext modelDbContext = new ModelDbContext())
             {
 
-                return View(modelDbContext.MUONSACKs.Where(x => x.MATHETV == id).FirstOrDefault());
+                return View(modelDbContext.MUONSACKs.Where(x => x.MAMUONSACH == id).FirstOrDefault());
             }
         }
 
@@ -33,7 +33,10 @@ namespace QLThuVienMTA.Controllers
         // GET: Muonsach/Create
         public ActionResult Create()
         {
+            
             return View();
+             
+
         }
 
         // POST: Muonsach/Create
@@ -44,8 +47,10 @@ namespace QLThuVienMTA.Controllers
             {
                 using (ModelDbContext modelDbContext = new ModelDbContext())
                 {
+                    
                     modelDbContext.MUONSACKs.Add(mUONSACK);
                     modelDbContext.SaveChanges();
+                    
                 }
                 // TODO: Add insert logic here
 
@@ -63,7 +68,7 @@ namespace QLThuVienMTA.Controllers
             using (ModelDbContext modelDbContext = new ModelDbContext())
             {
 
-                return View(modelDbContext.MUONSACKs.Where(x => x.MATHETV == id).FirstOrDefault());
+                return View(modelDbContext.MUONSACKs.Where(x => x.MAMUONSACH == id).FirstOrDefault());
             }
         }
 
@@ -93,7 +98,7 @@ namespace QLThuVienMTA.Controllers
             using (ModelDbContext modelDbContext = new ModelDbContext())
             {
 
-                return View(modelDbContext.MUONSACKs.Where(x => x.MATHETV == id).FirstOrDefault());
+                return View(modelDbContext.MUONSACKs.Where(x => x.MAMUONSACH == id).FirstOrDefault());
             }
         }
 

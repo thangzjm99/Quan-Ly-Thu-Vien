@@ -145,6 +145,7 @@
     <Compile Include="Models\DONGSACH.cs" />
     <Compile Include="Models\ModelDbContext.cs" />
     <Compile Include="Models\MUONSACK.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\THELOAI.cs" />
     <Compile Include="Models\THETHUVIEN.cs" />
     <Compile Include="Models\TINHTRANGSACH.cs" />

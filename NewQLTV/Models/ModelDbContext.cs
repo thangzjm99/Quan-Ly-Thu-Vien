@@ -8,13 +8,14 @@ namespace NewQLTV.Models
     public partial class ModelDbContext : DbContext
     {
         public ModelDbContext()
-            : base("name=ModelDbContext")
+            : base("name=ModelDbContext2")
         {
         }
 
         public virtual DbSet<DOCGIA> DOCGIAs { get; set; }
         public virtual DbSet<DONGSACH> DONGSACHes { get; set; }
         public virtual DbSet<MUONSACK> MUONSACKs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<THELOAI> THELOAIs { get; set; }
         public virtual DbSet<THETHUVIEN> THETHUVIENs { get; set; }
         public virtual DbSet<TINHTRANGSACH> TINHTRANGSACHes { get; set; }

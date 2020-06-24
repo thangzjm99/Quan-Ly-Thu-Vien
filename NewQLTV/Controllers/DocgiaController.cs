@@ -77,7 +77,7 @@ namespace QLThuVienMTA.Controllers
         {
             try
             {
-                if (Request.Form["image"] != null)
+                if (uploadImage != null && uploadImage.ContentLength > 0)
                 {
                     if (dOCGIA.IMAGE != null)
                     {
@@ -95,6 +95,10 @@ namespace QLThuVienMTA.Controllers
                 using (ModelDbContext modelDbContext = new ModelDbContext())
                 {
                     modelDbContext.Entry(dOCGIA).State = EntityState.Modified;
+                    if (uploadImage == null)
+                    {
+                        modelDbContext.Entry(dOCGIA).Property(m => m.IMAGE).IsModified = false;
+                    }
                     modelDbContext.SaveChanges();
                 }
                 return RedirectToAction("Index");

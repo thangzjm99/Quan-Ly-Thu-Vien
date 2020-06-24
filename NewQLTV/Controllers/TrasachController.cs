@@ -25,7 +25,7 @@ namespace QLThuVienMTA.Controllers
             using (ModelDbContext modelDbContext = new ModelDbContext())
             {
 
-                return View(modelDbContext.TRASACHes.Where(x => x.MAMUONTRA == id).FirstOrDefault());
+                return View(modelDbContext.TRASACHes.Where(x => x.MATRASACH == id).FirstOrDefault());
             }
         }
 
@@ -62,7 +62,7 @@ namespace QLThuVienMTA.Controllers
             using (ModelDbContext modelDbContext = new ModelDbContext())
             {
 
-                return View(modelDbContext.TRASACHes.Where(x => x.MAMUONTRA == id).FirstOrDefault());
+                return View(modelDbContext.TRASACHes.Where(x => x.MATRASACH == id).FirstOrDefault());
             }
         }
 
@@ -92,7 +92,7 @@ namespace QLThuVienMTA.Controllers
             using (ModelDbContext modelDbContext = new ModelDbContext())
             {
 
-                return View(modelDbContext.TRASACHes.Where(x => x.MAMUONTRA == id).FirstOrDefault());
+                return View(modelDbContext.TRASACHes.Where(x => x.MATRASACH == id).FirstOrDefault());
             }
         }
 
@@ -104,7 +104,7 @@ namespace QLThuVienMTA.Controllers
             {
                 using (ModelDbContext modeldbContext = new ModelDbContext())
                 {
-                    TRASACH tRASACH = modeldbContext.TRASACHes.Where(x => x.MAMUONTRA == id).FirstOrDefault();
+                    TRASACH tRASACH = modeldbContext.TRASACHes.Where(x => x.MATRASACH == id).FirstOrDefault();
                     modeldbContext.TRASACHes.Remove(tRASACH);
                     modeldbContext.SaveChanges();
                 }
