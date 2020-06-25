@@ -40,9 +40,9 @@
                     @Html.DisplayFor(modelItem => item.GHICHU)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.MATINHTRANG }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.MATINHTRANG }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.MATINHTRANG })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MATINHTRANG }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MATINHTRANG }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MATINHTRANG }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

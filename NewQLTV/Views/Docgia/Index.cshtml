@@ -71,9 +71,9 @@
                     <img src="@Url.Content("~/Images/"+item.IMAGE)" height="100px" width="100px" alt="Alternate Text" />
                 </td>
                 <td>
-                    @Html.ActionLink("Sửa", "Edit", new { id = item.MASINHVIEN }) |
-                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MASINHVIEN }) |
-                    @Html.ActionLink("Xóa", "Delete", new { id = item.MASINHVIEN })
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MASINHVIEN }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MASINHVIEN }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MASINHVIEN }, new { @class = "btn btn-danger" })
                 </td>
                 
             </tr>

@@ -72,9 +72,9 @@
             </td>
 
             <td>
-                @Html.ActionLink("Sửa", "Edit", new { id = item.MASACH }) |
-                @Html.ActionLink("Chi tiết ", "Details", new { id = item.MASACH }) |
-                @Html.ActionLink("Xóa", "Delete", new { id = item.MASACH })
+                @Html.ActionLink("Sửa", "Edit", new { id = item.MASACH }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Chi tiết ", "Details", new { id = item.MASACH }, new { @class = "btn btn-warning" }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.MASACH }, new { @class = "btn btn-danger" })
             </td>
         </tr>
 

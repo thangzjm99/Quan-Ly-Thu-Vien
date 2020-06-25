@@ -40,9 +40,9 @@
                     @Html.DisplayFor(modelItem => item.NGAYKETTHUC)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.MATHETV }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.MATHETV }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.MATHETV })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MATHETV }, new { @class = "btn btn-primary" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MATHETV }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MATHETV }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }
